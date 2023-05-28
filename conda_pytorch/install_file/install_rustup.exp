@@ -1,0 +1,5 @@
+#!/usr/bin/expect
+spawn sh install_file/rustup.sh
+expect "*Cancel installation"
+send "1\n"
+expect eof

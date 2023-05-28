@@ -1,0 +1,6 @@
+#!/usr/bin/expect
+set CUDA [lindex $argv 0]
+spawn conda install pytorch torchvision torchaudio pytorch-cuda=$CUDA -c pytorch -c nvidia
+expect "*?"
+send "y\n"
+expect eof
